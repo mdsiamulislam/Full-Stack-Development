@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#back-end">Back-end Development</a></li>
+            <li><a href="#essential-topics">Essential Topics</a></li>
+        </ul>
+    </nav>
+
+<h1>Front-end Development Roadmap</h1>
+
+<h2>What is HTML? Why HTML?</h2>
+<p>HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and applications. HTML provides the structure and content of a webpage, defining the elements and their relationships.</p>
+
+<p>HTML is essential for web development because:</p>
+<ul>
+    <li><strong>Structure:</strong> HTML defines the structure of a webpage, including headings, paragraphs, lists, tables, forms, and more. It organizes the content and provides a logical hierarchy.</li>
+    <li><strong>Accessibility:</strong> HTML supports accessibility features, allowing developers to create web pages that are accessible to people with disabilities. Semantic HTML elements help screen readers and assistive technologies understand the content.</li>
+    <li><strong>Compatibility:</strong> HTML is supported by all modern web browsers, making it a universal language for web development. It ensures that web pages can be accessed and displayed correctly across different devices and platforms.</li>
+    <li><strong>Integration:</strong> HTML seamlessly integrates with other web technologies like CSS and JavaScript. It allows developers to add styling, interactivity, and dynamic behavior to web pages.</li>
+</ul>
+
+<h2>History of HTML</h2>
+<p>HTML has a rich history that dates back to the early days of the World Wide Web. Here are some key milestones:</p>
+<ul>
+    <li><strong>1990:</strong> Tim Berners-Lee invents HTML as a way to share documents on the internet.</li>
+    <li><strong>1993:</strong> HTML 2.0 is released, introducing new features like tables and forms.</li>
+    <li><strong>1995:</strong> HTML 3.0 is released, adding support for style sheets and tables.</li>
+    <li><strong>1997:</strong> HTML 4.0 is released, introducing new elements and attributes for better structure and presentation.</li>
+    <li><strong>2000:</strong> HTML 4.01 is released as a minor update to HTML 4.0.</li>
+    <li><strong>2008:</strong> HTML5 is introduced, bringing significant improvements and new features to HTML.</li>
+    <li><strong>2014:</strong> HTML5 becomes an official W3C recommendation, marking a major milestone in the evolution of HTML.</li>
+    <li><strong>2019:</strong> HTML5.2 is released, adding new features and improvements to HTML5.</li>
+    <li><strong>2022:</strong> HTML6 is currently under development, aiming to further enhance the capabilities of HTML.</li>
+</ul>
+
+<h2>Advantages of HTML</h2>
+<ul>
+    <li><strong>Ease of Use:</strong> HTML is a simple and straightforward language, making it easy for beginners to learn and use.</li>
+    <li><strong>Wide Browser Support:</strong> HTML is supported by all modern web browsers, ensuring compatibility across different platforms and devices.</li>
+    <li><strong>SEO-Friendly:</strong> HTML provides semantic elements that help search engines understand the content of web pages, improving search engine optimization (SEO).</li>
+    <li><strong>Integration with Other Technologies:</strong> HTML seamlessly integrates with CSS for styling and JavaScript for interactivity, allowing developers to create dynamic and visually appealing web pages.</li>
+    <li><strong>Accessibility:</strong> HTML supports accessibility features, making it possible to create web pages that are accessible to people with disabilities.</li>
+    <li><strong>Continuous Evolution:</strong> HTML is constantly evolving, with new versions and features being introduced to enhance its capabilities and keep up with the changing needs of web development.</li>
+</ul>
+
+<h2>Environment Setup for HTML</h2>
+<p>To set up your environment for HTML development, follow these steps:</p>
+<ol>
+    <li><strong>Install a text editor:</strong> Choose a text editor that suits your preferences. Some popular options include Visual Studio Code, Sublime Text, and Atom.</li>
+    <li><strong>Install a web browser:</strong> You will need a web browser to test and preview your HTML pages. Google Chrome, Mozilla Firefox, and Microsoft Edge are commonly used browsers.</li>
+    <li><strong>Set up a local development server:</strong> To run your HTML pages locally, you can set up a local development server. This allows you to test your pages with server-side functionality. Some popular options include Apache, Nginx, and Node.js.</li>
+    <li><strong>Install Git:</strong> Git is a version control system that helps you manage your codebase. Install Git on your machine to track changes and collaborate with others.</li>
+    <li><strong>Learn and practice:</strong> Familiarize yourself with HTML syntax, tags, and attributes. Practice creating HTML pages and experiment with different elements and styles.</li>
+</ol>
+
+<h2>Fundamentals of HTML</h2>
+
+<h3>Introduction to HTML</h3>
+<p>HTML (Hypertext Markup Language) is the standard markup language used to create web pages. It provides the structure of a webpage and consists of a series of elements represented by tags.</p>
+
+<h4>Basic HTML Document Structure:</h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Typography</h3>
+<p>Typography in HTML refers to the styling and arrangement of text on a webpage.</p>
+
+<h4>Basic Typography Elements:</h4>
+<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italic text&lt;/em&gt;
+</code></pre>
+
+<h4>Additional Elements:</h4>
+<pre><code>&lt;blockquote&gt;This is a blockquote.&lt;/blockquote&gt;
+&lt;code&gt;This is inline code.&lt;/code&gt;
+&lt;pre&gt;
+    This is preformatted text.
+&lt;/pre&gt;
+</code></pre>
+
+<h3>Lists, Links, Media</h3>
+
+<h4>Lists:</h4>
+<p>HTML supports both ordered and unordered lists.</p>
+
+<h5>Unordered List:</h5>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h5>Ordered List:</h5>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<h4>Links:</h4>
+<p>Links are created using the <code>&lt;a&gt;</code> tag.</p>
+<pre><code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+</code></pre>
+
+<h4>Media:</h4>
+<p>HTML allows embedding various types of media.</p>
+
+<h5>Image:</h5>
+<pre><code>&lt;img src="image.jpg" alt="Description of image" /&gt;
+</code></pre>
+
+<h5>Video:</h5>
+<pre><code>&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4" /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+
+<h5>Audio:</h5>
+<pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+  Your browser does not support the audio tag.
+&lt;/audio&gt;
+</code></pre>
+
+<h2>Tables & Forms</h2>
+
+<h3>Tables:</h3>
+<p>Tables are used to display data in a tabular format.</p>
+
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h3>Forms:</h3>
+<p>Forms are used to collect user input.</p>
+
+<pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" /&gt;&lt;br /&gt;&lt;br /&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" /&gt;&lt;br /&gt;&lt;br /&gt;
+  &lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>Additional Topics to Learn</h2>
+
+<h3>Semantic HTML</h3>
+<p>Learn about semantic elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;aside&gt;</code> which provide meaning to the structure of the webpage.</p>
+
+<h3>HTML5 APIs</h3>
+<p>Explore HTML5 APIs like Geolocation, Local Storage, Web Workers, and Canvas for more interactive and dynamic web applications.</p>
+
+<h3>Accessibility</h3>
+<p>Understand the importance of web accessibility and how to make your web pages accessible to all users, including those with disabilities.</p>
+
+<h3>SEO Best Practices</h3>
+<p>Learn how to structure your HTML to improve search engine optimization, including proper use of headings, meta tags, and alt attributes for images.</p>
+
+<h2>Web Accessibility</h2>
+
+<h2>HTML5/Semantic HTML</h2>
+
+<h3>HTML5</h3>
+<p>HTML5 introduced several new semantic elements that help improve the structure and readability of the HTML code. These elements provide meaning to the content they wrap, making it easier for browsers, search engines, and developers to understand the hierarchy and type of content.</p>
+
+<h4>Key Semantic Elements in HTML5:</h4>
+<ul>
+    <li><strong><code>&lt;header&gt;</code></strong>: Represents introductory content or a set of navigational links.</li>
+    <li><strong><code>&lt;nav&gt;</code></strong>: Contains the navigation links for the website.</li>
+    <li><strong><code>&lt;main&gt;</code></strong>: Represents the main content of the document, excluding headers, footers, and sidebars.</li>
+    <li><strong><code>&lt;section&gt;</code></strong>: Defines a section in a document, typically with a heading.</li>
+    <li><strong><code>&lt;article&gt;</code></strong>: Represents a self-contained piece of content that could be distributed independently.</li>
+    <li><strong><code>&lt;aside&gt;</code></strong>: Contains content that is tangentially related to the content around it, often used for sidebars.</li>
+    <li><strong><code>&lt;footer&gt;</code></strong>: Represents the footer of a document or a section, usually containing metadata or links to related documents.</li>
+</ul>
+
+<h4>Example of Semantic HTML:</h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;My Website&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section id="home"&gt;
+        &lt;h2&gt;Welcome to My Website&lt;/h2&gt;
+        &lt;p&gt;This is the home section.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section id="about"&gt;
+        &lt;h2&gt;About Me&lt;/h2&gt;
+        &lt;p&gt;This is the about section.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Latest Article&lt;/h2&gt;
+        &lt;p&gt;This is a self-contained article.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;aside&gt;
+      &lt;h2&gt;Related Links&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+      &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>SEO Best Practices</h2>
+
+<h3>SEO (Search Engine Optimization)</h3>
+<p>SEO involves optimizing web pages to rank higher in search engine results, improving visibility and attracting more organic traffic.</p>
+
+<h4>Key SEO Best Practices:</h4>
+<ul>
+    <li><strong>Title Tags:</strong>
+        <pre><code>&lt;title&gt;Learn Semantic HTML and SEO Best Practices&lt;/title&gt;</code></pre>
+    </li>
+    <li><strong>Meta Descriptions:</strong>
+        <pre><code>&lt;meta name="description" content="Learn about HTML5 semantic elements and SEO best practices to improve your web development skills." /&gt;</code></pre>
+    </li>
+    <li><strong>Header Tags:</strong>
+        <pre><code>&lt;h1&gt;Learn HTML5 and SEO&lt;/h1&gt;
+&lt;h2&gt;Introduction to Semantic HTML&lt;/h2&gt;
+&lt;h3&gt;Key Elements&lt;/h3&gt;
+</code></pre>
+    </li>
+    <li><strong>Alt Attributes for Images:</strong>
+        <pre><code>&lt;img src="semantic-html.png" alt="Diagram showing semantic HTML elements" /&gt;</code></pre>
+    </li>
+    <li><strong>URL Structure:</strong>
+        <pre><code>https://www.example.com/learn-html5-seo</code></pre>
+    </li>
+    <li><strong>Internal Linking:</strong>
+        <pre><code>&lt;a href="/about"&gt;About Us&lt;/a&gt;</code></pre>
+    </li>
+    <li><strong>Mobile-Friendliness:</strong>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code></pre>
+    </li>
+    <li><strong>Content Quality:</strong>
+        <p>Create high-quality, valuable content that answers users' questions and provides comprehensive information.</p>
+    </li>
+    <li><strong>Load Speed:</strong>
+        <p>Optimize your website for faster loading times. This includes compressing images, minifying CSS and JavaScript, and leveraging browser caching.</p>
+    </li>
+    <li><strong>Schema Markup:</strong>
+        <p>Use schema.org markup to provide search engines with more information about your content, such as reviews, events, and products.</p>
+    </li>
+</ul>
+
+<h4>Example of a Well-Optimized HTML Page:</h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Learn HTML5 and SEO Best Practices&lt;/title&gt;
+    &lt;meta name="description" content="Learn about HTML5 semantic elements and SEO best practices to improve your web development skills." /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Learn HTML5 and SEO&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section id="home"&gt;
+        &lt;h2&gt;Welcome to My Website&lt;/h2&gt;
+        &lt;p&gt;This is the home section where you can find the latest information on HTML5 and SEO best practices.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section id="about"&gt;
+        &lt;h2&gt;About Me&lt;/h2&gt;
+        &lt;p&gt;This section provides information about the author and the purpose of this website.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Latest Article&lt;/h2&gt;
+        &lt;p&gt;This article explains the benefits of using semantic HTML elements for better SEO and accessibility.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;aside&gt;
+      &lt;h2&gt;Related Links&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+      &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Resources</h4>
+    <ul>
+        <li>My Repository</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3School</li>
+        <li>Projects</li>
+    </ul>
+<hr><hr>
+
+<h1>Fundamentals of CSS</h1>
+
+    <h2>Introduction to CSS</h2>
+    <p>CSS (Cascading Style Sheets) is used to style and layout web pages, allowing you to apply styles to elements, control the layout, and enhance the appearance of your website.</p>
+    <div class="example">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Introduction to CSS&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, CSS!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>CSS Selectors & Combinators</h2>
+    <p>CSS selectors are patterns used to select the elements you want to style. Combinators define the relationship between the selectors.</p>
+    <div class="example">
+        <pre><code>/* Selects all &lt;p&gt; elements */
+p {
+    color: blue;
+}
+
+/* Selects &lt;p&gt; elements inside &lt;div&gt; */
+div p {
+    color: red;
+}
+
+/* Selects all &lt;p&gt; elements with class 'intro' */
+p.intro {
+    font-weight: bold;
+}
+
+/* Selects the first &lt;p&gt; element */
+p:first-of-type {
+    text-decoration: underline;
+}</code></pre>
+    </div>
+
+    <h2>CSS Typography</h2>
+    <p>CSS allows you to control text styles such as font, size, weight, and spacing.</p>
+    <div class="example">
+        <pre><code>h1 {
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+}</code></pre>
+    </div>
+
+    <h2>CSS Box Model</h2>
+    <p>The CSS Box Model represents the structure of a web page's elements, including margins, borders, padding, and the actual content.</p>
+    <div class="example">
+        <pre><code>div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid red;
+    margin: 15px;
+}</code></pre>
+    </div>
+
+    <h2>Advanced CSS</h2>
+    <h3>Shadow & Gradients</h3>
+    <p>Add depth and dimension to elements using shadows and gradients.</p>
+    <div class="example">
+        <pre><code>/* Box shadow */
+box {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* Linear gradient */
+div {
+    background: linear-gradient(to right, red, yellow);
+}</code></pre>
+    </div>
+
+    <h3>Transitions & Animation</h3>
+    <p>CSS transitions and animations add dynamic behavior to elements.</p>
+    <div class="example">
+        <pre><code>/* Transition */
+button {
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+/* Animation */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+div {
+    animation-name: example;
+    animation-duration: 4s;
+}</code></pre>
+    </div>
+
+    <h3>Variables</h3>
+    <p>CSS variables (custom properties) store values that can be reused throughout the stylesheet.</p>
+    <div class="example">
+        <pre><code>:root {
+    --main-color: #3498db;
+    --padding: 10px;
+}
+
+button {
+    color: var(--main-color);
+    padding: var(--padding);
+}</code></pre>
+    </div>
+
+    <h3>Responsiveness</h3>
+    <p>Make web pages adapt to different screen sizes using media queries and responsive units.</p>
+    <div class="example">
+        <pre><code>/* Media query */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+    </div>
+
+    <h2>CSS Layout</h2>
+    <h3>Position, Floats, Flexbox, Grid</h3>
+    <p>CSS provides various techniques for layout, including position, floats, Flexbox, and Grid.</p>
+    <div class="example">
+        <pre><code>/* Example (Flexbox) */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Example (Grid) */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    padding: 20px;
+    background-color: #f4f4f4;
+}</code></pre>
+    </div>
+
+    <h2>CSS Architecture</h2>
+    <h3>BEM/SMACSS</h3>
+    <p>CSS architecture methodologies like BEM (Block Element Modifier) and SMACSS (Scalable and Modular Architecture for CSS) help maintain scalable and organized code.</p>
+    <div class="example">
+        <pre><code>&lt;div class="block"&gt;
+    &lt;div class="block__element block__element--modifier"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h2>CSS Frameworks & Pre-processors</h2>
+    <h3>Bootstrap 5 / Tailwind CSS</h3>
+    <p>Bootstrap and Tailwind CSS are popular frameworks that provide pre-built styles and components to streamline development.</p>
+    <div class="example">
+        <pre><code>&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;Column 1&lt;/div&gt;
+        &lt;div class="col-md-4"&gt;Column 2&lt;/div&gt;
+        &lt;div class="col-md-4"&gt;Column 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h3>SASS / LESS / PostCSS</h3>
+    <p>Pre-processors like SASS and LESS extend CSS with features like variables, nested rules, and mixins.</p>
+    <div class="example">
+        <pre><code>$main-color: #3498db;
+.container {
+    color: $main-color;
+    padding: 20px;
+    .item {
+        background-color: lighten($main-color, 10%);
+    }
+}</code></pre>
+    </div>
+
+    <h2>Resources</h2>
+    <p>Here are some resources to help you learn CSS:</p>
+    <ul>
+        <li>CSS Full Course (Anisul Islam)</li>
+        <li>CSS Documentation (Anisul Islam)</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3Schools</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p>Applying CSS knowledge in projects helps solidify concepts. Here are a few project ideas:</p>
+    <ol>
+        <li>Personal Portfolio</li>
+        <li>E-commerce Product Page</li>
+        <li>Interactive Dashboard</li>
+        <li>Themed Blog</li>
+    </ol>
+</body>
+</body>
+</html>

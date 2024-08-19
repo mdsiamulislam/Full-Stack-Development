@@ -1,0 +1,391 @@
+# JavaScript Basic to Advance
+
+## Pre-Requirements
+- HTML
+- CSS
+- IDE
+
+## Introduction to JavaScript
+### What is JavaScript?
+JavaScript is a high-level programming language primarily used for creating interactive and dynamic web pages. Often referred to as the "language of the web," it allows developers to add functionality to websites, handle user interactions, manipulate HTML elements, and communicate with servers. JavaScript can be used both on the client-side (in the browser) and on the server-side (with frameworks like Node.js). It supports object-oriented, functional, and procedural programming paradigms.
+
+### How to Add JavaScript
+- **Inline JavaScript**: 
+  ```html
+  <body onload="alert('Text')">
+  ```
+- **Internal JavaScript**: 
+  ```html
+  <script>
+    document.write("<strong>Name :</strong> John Doe <br/>");
+    document.write("Age : " + 25 + " <br/>");
+    document.write("University : XYZ University");
+  </script>
+  ```
+- **External JavaScript**:
+  1. Create a file with a `.js` extension.
+  2. Link it in HTML:
+  ```html
+  <script src="script.js"></script>
+  ```
+  3. Add your JavaScript code in the external file.
+
+### Print Statements
+- `alert("Welcome Developer!")` : Gives a popup on the webpage.
+- `document.write("Let's drive on JS")` : Writes on the HTML page.
+- `console.log("Debug in Console")` : Shows in the console section.
+- `typeof(dataType)` : Returns the type of data.
+
+### Comments
+- **Single Line Comment**: 
+  ```javascript
+  // This is a single line comment
+  ```
+- **Multi-Line Comment**:
+  ```javascript
+  /* This is a multiline comment */
+  ```
+
+### Environment Setup (ESLint, Prettier)
+1. Initialize npm:
+   ```sh
+   npm init -y
+   ```
+2. Install ESLint:
+   ```sh
+   npm install eslint --save-dev
+   npx eslint --init
+   ```
+3. Install Prettier:
+   ```sh
+   npm install --save-dev --save-exact prettier
+   npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+   ```
+4. Configure ESLint:
+   ```json
+   // .eslintrc.json
+   {
+     "extends": ["plugin:prettier/recommended"]
+   }
+   ```
+5. Create a Prettier configuration file (optional):
+   ```json
+   // .prettierrc
+   {
+     "singleQuote": true,
+     "semi": false
+   }
+   ```
+6. Add scripts to `package.json` (optional):
+   ```json
+   "scripts": {
+     "lint": "eslint .",
+     "format": "prettier --write ."
+   }
+   ```
+
+### Tokens
+- **Keywords**: `break`, `case`, `catch`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `finally`, `for`, `function`, `if`, `in`, `instanceof`, `new`, `return`, `switch`, `this`, `throw`, `try`, `typeof`, `var`, `void`, `while`, `with`, etc.
+- **Punctuators and Escape Sequences**: Symbols and escape sequences used for various purposes.
+
+### Data Types
+- **String**: `"This is a string"` or `'This is a string'`
+- **Number**: `23` or `23.2`
+- **Boolean**: `true` or `false`
+- **Object**:
+  ```javascript
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30
+  };
+  ```
+
+### Variables
+- Declaration:
+  ```javascript
+  var welcomeMsg = "Welcome to developer community!";
+  document.write(welcomeMsg);
+  ```
+- **Rules for Naming Variables**:
+  - Use letters, numbers, `_`, and `$`.
+  - Cannot start with a digit.
+  - No spaces in names.
+  - Cannot use reserved keywords.
+  - Case sensitive.
+
+### Number Methods
+- `toString(var)`: Convert number to string.
+- `parseInt(var, base)`: Convert string to number.
+- `parseFloat(var)`: Convert string to float.
+- `var.toFixed(2)`: Control decimal places with rounding.
+- `var.toPrecision(2)`: Control decimal places without rounding.
+- `Number("anyNumber")`: Convert string to number.
+- `Number(boolean)`: Return 1 for true and 0 for false.
+
+### String Concatenation Methods
+- `"String1" + "String2"`
+- `stringVar1 + stringVar2`
+- `"String" + stringVar`
+
+### Library Functions
+- `var.length`: Length of the variable.
+- `prompt("Prompt msg")`: Get input from user.
+- `var.charAt(index)`: Get character at index.
+- `var.toUpperCase()`: Convert to uppercase.
+- `var.toLowerCase()`: Convert to lowercase.
+- `var1.concat(var2)`: Concatenate two variables.
+- `var.slice(startIndex, endIndex)`: Slice string from start to end index.
+
+### Arithmetic and Assignment Operators
+- **Arithmetic**: `+`, `-`, `*`, `/`, `%`, `**` (power), `--` (decrement), `++` (increment)
+- **Assignment**: `=`, `+=`, `-=`, `*=`, `/=`
+
+### Relational and Logical Operators
+- **Relational**: `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==`
+- **Logical**: `&&` (and), `||` (or), `!` (not)
+
+## Control Statements
+### Conditional Control Statements
+- **If-Else**:
+  ```javascript
+  if (condition) {
+    // code if condition is true
+  } else if (condition) {
+    // code if first condition is false and this condition is true
+  } else {
+    // code if all conditions are false
+  }
+  ```
+- **Switch**:
+  ```javascript
+  switch (condition) {
+    case 1:
+      // code
+      break;
+    case 2:
+      // code
+      break;
+    default:
+      // code
+  }
+  ```
+
+### Jump Control Statements
+- **Break**: Exit from the code block.
+- **Continue**: Skip the matched condition code.
+
+### Loop Control Statements
+- **For Loop**:
+  ```javascript
+  for (let i = 0; i < 10; i++) {
+    // executing code
+  }
+  ```
+- **While Loop**:
+  ```javascript
+  while (condition) {
+    // executing code
+  }
+  ```
+- **Do-While Loop**:
+  ```javascript
+  do {
+    // executing code
+  } while (condition);
+  ```
+
+### Ternary Control Statement
+```javascript
+var condition ? "Code if true" : "Code if false";
+```
+
+## Functions and Objects
+### Function Declaration, Parameters, Return
+- **Function Declaration**:
+  ```javascript
+  function nameFunction() {
+    // code
+  }
+  ```
+- **Parameters**:
+  ```javascript
+  function nameFunction(variable) {
+    // code
+  }
+  ```
+- **Return**:
+  ```javascript
+  function nameFunction(variable) {
+    return result;
+  }
+  ```
+
+### IIFEs and Function Expression
+- **IIFE**:
+  ```javascript
+  (function(variable) {
+    // code
+  })(parameter);
+  ```
+- **Function Expression**:
+  ```javascript
+  var display = function(variable) {
+    return result;
+  }
+  display(parameter);
+  ```
+
+## Arrays
+### Array Types
+- **1D Array**:
+  ```javascript
+  var arrayName = new Array(arraySize);
+  arrayName[0] = arrayValue;
+
+  // Another way
+  var arrayName = [arrayValue1, arrayValue2, arrayValue3];
+  console.log(arrayName[0]);
+  ```
+- **2D Array**:
+  ```javascript
+  var arrayName = [
+    [arrayValue, arrayData],
+    [arrayValue1, arrayData1]
+  ];
+  ```
+
+### Array Methods
+- **Properties and Methods**:
+  ```javascript
+  arrayName.length; // Get the length of the array
+  arrayName.push("arrayValue"); // Add new value to the end of array
+  arrayName.pop(); // Remove last value from array
+  arrayName1.concat(arrayName2); // Concatenate two arrays
+  ```
+
+### Loop in Array
+```javascript
+for (var i = 0; i < arrayName.length; i++) {
+  console.log(arrayName[i]);
+}
+```
+
+### Array Library Methods
+- `arrayName.shift()`: Remove first value from array.
+- `arrayName.unshift("arrayValue")`: Add value to the beginning of array.
+- `arrayName.slice(startIndex, endIndex)`: Remove data from start to end index (returns a new array).
+- `arrayName.sort()`: Sort the array (string type).
+- `arrayName.reverse()`: Reverse the array.
+- `arrayName.sort(function(a, b) { return a - b; })`: Sort the array (number type).
+
+## object and constructor
+  why object need ?
+  syntext ?
+  how to acces object ?
+  object template or constructor ?
+  Rules of constructor ?
+  syntext of constructor ?
+  add function inside on constructor ?
+
+## Math object
+
+
+## Date object and method
+  let date = new Date();
+console.log(date);
+
+let year = date.getFullYear();
+console.log(year);
+
+let month = date.getMonth();
+console.log(month);
+
+let day = date.getDate();
+console.log(day);
+
+let hour = date.getHours();
+console.log(hour);
+
+let minute = date.getMinutes();
+console.log(minute);
+
+let second = date.getSeconds();
+console.log(second);
+
+let millisecond = date.getMilliseconds();
+console.log(millisecond);
+
+let time = date.getTime();
+console.log(time);
+
+
+## DOM (Document object model)
+  Select HTML element
+  // get element by id
+  document.getElementById("header").innerHTML = "Hello World!"; -> chnage text on element . element selecting by id
+  document.getElementsByTagName("h1")[1].innerHTML = "Hello World ... !"; -> chnage text on element . element selecting by tag
+  document.getElementsByClassName("h1")[1].innerHTML = "Hello World ... !"; -> chnage text on element . element selecting by html class name
+  
+## Qyery Select
+  document.querySelector("#heading").innerHTML = "Hello World??!";
+  // quayery select select method like css select method
+
+## One click method
+
+## DOM
+  -Find/get
+  -chnage
+  -add or delete html element
+  - DOM trabersing and manipulations
+  - Dom and DOM tree
+    -Upward , downward , sideways
+  let body = document.getElementsByTagName("body")[0];
+
+let link = document.createElement("a");
+let text = document.createTextNode("Click me");
+link.href = "#";
+
+link.appendChild(text);
+
+body.insertBefore(link, body.firstChild);
+
+
+## Chnage CSS style dynamically
+## EventLeaciner
+## Eventlicenar  with multiple elements
+## How to play audio by js
+## How to add and Remove animations
+## keypress EventLeaciner
+## DOM event , Event object , onchange event;
+  -evet type : change , submit , load , unload , open, play , canplay ,pause , playing , progress , ened , resize , scroll , toggle etc.
+  - properties : typpe , target , preventDefault()
+  MouseEvent Object
+  KeybordEvent Object
+  FocusEvent Object
+  ClipboardEvent Object
+  DragEvent Object
+  
+
+  
+
+  -module
+  objec declare , access , method in object , constructor
+  , access
+  ##Methods
+  -array, number,string , date,math object Methods
+## Exception Handling 
+-try,ctch,finally , error types , best practices
+## DOM & BOM
+- selecting , changing  , creating and deletin HTML elements
+-Events : MouceEvent KeybordEvent , FocusEvent,Exception
+-Project : image slideshow , calculator ,guessing game, quize
+-CRUD: todo app
+
+## ES6 & API
+-let vs const , template literals , Default parameter,Rest parameter, spread operator, destructure , object iterals, for of and for in
+-Arrow function , restructuring,operator-Synchronous VS Asynchoronus: Callback , higher order functions, promise , async awair
+-JSON
+-Fetch API , Axios,ajax
+-Localstorage
+## project

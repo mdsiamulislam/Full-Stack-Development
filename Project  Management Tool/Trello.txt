@@ -1,0 +1,13 @@
+Use Trello(https://trello.com/) For Manage Project
+
+Step1 Make Workspace
+Step 2 Make Boards
+Step 3 Make Lists
+Step 4 Cards
+
+
+Use https://www.netlify.com/ for hosting site
+
+https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd : ins[ect for accesable or note]
+
+https://webaim.org/resources/contrastchecker/ check for background and color radio setion

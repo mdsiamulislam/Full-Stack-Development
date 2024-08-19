@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development by MERN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <ul>
+            <li><a href="Front-End Development/index.html">Front-end Development</a></li>
+            <li><a href="#back-end">Back-end Development</a></li>
+            <li><a href="#essential-topics">Essential Topics</a></li>
+        </ul>
+    </nav>
+    <h1>Full Stack Web Development by MERN</h1>
+    <p>Full Stack Web Development refers to the development of both the front-end and back-end components of a web application. The MERN stack is a popular choice for full stack web development, which consists of the following technologies:</p>
+    <ul>
+        <li><strong>MongoDB</strong>: A NoSQL database that stores data in a flexible, JSON-like format.</li>
+        <li><strong>Express.js</strong>: A web application framework for Node.js that provides a set of features for building web applications and APIs.</li>
+        <li><strong>React</strong>: A JavaScript library for building user interfaces.</li>
+        <li><strong>Node.js</strong>: A JavaScript runtime environment that allows you to run JavaScript on the server-side.</li>
+    </ul>
+    <p>By learning the MERN stack, you will be able to develop end-to-end web applications, from the database to the user interface. This comprehensive approach to web development enables you to handle both the front-end and back-end aspects of a project, making you a versatile and in-demand developer.</p>
+
+    <h2>Front-end Development</h2>
+    <p>Start by learning HTML, CSS, and JavaScript, which are the core technologies for front-end development. Gain a solid understanding of web design fundamentals and how to create interactive and responsive user interfaces.</p>
+
+    <h2>Back-end Development</h2>
+    <p>Once you have a good grasp of front-end development, dive into server-side programming with Node.js and Express.js. Learn how to build APIs, handle data storage and retrieval with MongoDB, and implement server-side logic.</p>
+
+    <h2>Integration</h2>
+    <p>Combine your front-end and back-end skills to create full stack web applications. Use React to build dynamic and interactive user interfaces that communicate with your server-side APIs.</p>
+
+    <h2>Deployment</h2>
+    <p>Learn how to deploy your web applications to hosting platforms like Heroku or AWS. Understand the process of setting up a production environment and managing your application in a live server environment.</p>
+
+    <hr>
+
+    <h2>Before Start let's know about Internet Basics</h2>
+
+    <h3>Browser</h3>
+    <p>A web browser is a software application used to access information on the World Wide Web. When a user requests a web page by entering a URL or clicking a link, the browser retrieves the necessary content from a web server and renders it on the user's device.</p>
+    <p><strong>How Browsers Work:</strong></p>
+    <ul>
+        <li><strong>User Interface (UI)</strong>: This includes the address bar, back/forward buttons, bookmarking menu, etc.</li>
+        <li><strong>Browser Engine</strong>: Manages actions between the UI and the rendering engine.</li>
+        <li><strong>Rendering Engine</strong>: Interprets HTML, CSS, and JavaScript to display the web page.</li>
+        <li><strong>Networking</strong>: Handles network calls, such as HTTP requests.</li>
+        <li><strong>JavaScript Interpreter</strong>: Executes JavaScript code.</li>
+        <li><strong>UI Backend</strong>: Draws basic widgets like combo boxes and windows.</li>
+        <li><strong>Data Storage</strong>: Stores data like cookies and web storage.</li>
+    </ul>
+    <p>Popular browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.</p>
+
+    <h3>HTTP, HTTPS</h3>
+    <p><strong>HTTP (Hypertext Transfer Protocol):</strong></p>
+    <ul>
+        <li>An application protocol used for transmitting hypermedia documents, such as HTML.</li>
+        <li>HTTP follows a client-server model where the browser (client) makes requests and the server responds.</li>
+        <li>It operates over TCP/IP and is stateless, meaning each request is executed independently without any knowledge of previous requests.</li>
+    </ul>
+    <p><strong>HTTPS (Hypertext Transfer Protocol Secure):</strong></p>
+    <ul>
+        <li>An extension of HTTP that uses encryption (via SSL/TLS) to secure data transfer.</li>
+        <li>It ensures data integrity and privacy between the client and server.</li>
+        <li>Websites with HTTPS show a padlock icon in the browser's address bar.</li>
+    </ul>
+
+    <h3>Domain</h3>
+    <p>A domain name is a human-readable address used to access websites. It maps to an IP address, which is a numerical label assigned to each device connected to a network.</p>
+    <p><strong>How Domains Work:</strong></p>
+    <ul>
+        <li><strong>Domain Name System (DNS)</strong>: Translates domain names into IP addresses.</li>
+        <li><strong>Top-Level Domains (TLDs)</strong>: Include .com, .org, .net, etc.</li>
+        <li><strong>Second-Level Domains</strong>: Typically the name of the website (e.g., `example` in `example.com`).</li>
+        <li><strong>Subdomains</strong>: Prefixes to the second-level domain (e.g., `blog.example.com`).</li>
+    </ul>
+    <p>Domains are essential for navigation on the internet, allowing users to access websites without remembering IP addresses.</p>
+
+    <h3>Hosting</h3>
+    <p>Web hosting is a service that allows individuals and organizations to make their websites accessible via the World Wide Web.</p>
+    <p><strong>Types of Hosting:</strong></p>
+    <ul>
+        <li><strong>Shared Hosting</strong>: Multiple websites share the same server resources.</li>
+        <li><strong>VPS Hosting (Virtual Private Server)</strong>: A virtualized server providing dedicated resources.</li>
+        <li><strong>Dedicated Hosting</strong>: A single server dedicated to one website.</li>
+        <li><strong>Cloud Hosting</strong>: Resources are spread across multiple servers, providing scalability.</li>
+        <li><strong>Managed Hosting</strong>: The hosting provider manages the server and infrastructure.</li>
+    </ul>
+    <p><strong>Process:</strong></p>
+    <ol>
+        <li>Choose a hosting provider.</li>
+        <li>Register a domain name.</li>
+        <li>Upload website files.</li>
+        <li>Configure DNS settings to point to the hosting server.</li>
+    </ol>
+
+    <h3>How Websites Work</h3>
+    <h4>Client-Server Model</h4>
+    <p>The client-server model is a distributed application structure that partitions tasks between clients (requesters) and servers (providers).</p>
+    <ul>
+        <li><strong>Client</strong>: A user device running a web browser.</li>
+        <li><strong>Server</strong>: A machine hosting the website, serving client requests.</li>
+        <li><strong>Communication</strong>: Clients send HTTP/HTTPS requests; servers process them and send back responses.</li>
+    </ul>
+
+    <h4>HTTP Request and Response</h4>
+    <p><strong>HTTP Request:</strong></p>
+    <ul>
+        <li><strong>Methods</strong>: Defines the type of action (e.g., GET, POST, PUT, DELETE).</li>
+        <li><strong>Headers</strong>: Contains metadata (e.g., User-Agent, Accept-Language).</li>
+        <li><strong>Body</strong>: Contains data (for methods like POST).</li>
+    </ul>
+    <p><strong>HTTP Response:</strong></p>
+    <ul>
+        <li><strong>Status Code</strong>: Indicates the result of the request (e.g., 200 OK, 404 Not Found).</li>
+        <li><strong>Headers</strong>: Contains metadata (e.g., Content-Type, Set-Cookie).</li>
+        <li><strong>Body</strong>: Contains the content (HTML, JSON, etc.).</li>
+    </ul>
+
+    <h2>Web Design Fundamentals - HTML, CSS, JS</h2>
+
+    <h3>HTML (Hypertext Markup Language)</h3>
+    <ul>
+        <li>The standard markup language for creating web pages.</li>
+        <li><strong>Elements</strong>: Structure content (e.g., <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;a&gt;</code>).</li>
+        <li><strong>Attributes</strong>: Provide additional information (e.g., <code>href</code>, <code>src</code>, <code>class</code>).</li>
+    </ul>
+
+    <h3>CSS (Cascading Style Sheets)</h3>
+    <ul>
+        <li>Describes how HTML elements should be displayed.</li>
+        <li><strong>Selectors</strong>: Target HTML elements (e.g., <code>#id</code>, <code>.class</code>, <code>element</code>).</li>
+        <li><strong>Properties</strong>: Define styles (e.g., <code>color</code>, <code>font-size</code>, <code>margin</code>).</li>
+    </ul>
+
+    <h3>JavaScript</h3>
+    <ul>
+        <li>A programming language that enables interactivity on web pages.</li>
+        <li><strong>DOM Manipulation</strong>: Allows dynamic changes to HTML and CSS.</li>
+        <li><strong>Events</strong>: Handles user actions (e.g., clicks, key presses).</li>
+        <li><strong>APIs</strong>: Interacts with external services (e.g., fetch data).</li>
+    </ul>
+    <p>Together, HTML, CSS, and JavaScript form the foundation of web development, enabling the creation of structured, styled, and interactive web pages.</p>
+
+    <hr>
+
+    <h2>Front-end Development Roadmap</h2>
+
+    <h3>HTML</h3>
+    <p>HTML is the foundation of web development. Learn the following:</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to HTML</li>
+        <li>History of HTML</li>
+        <li>Advantages of HTML</li>
+        <li>Typography</li>
+        <li>Lists, Links, Media</li>
+        <li>Tables & Forms</li>
+    </ul>
+
+    <h4>Web Accessibility</h4>
+    <ul>
+        <li>HTML5/Semantic HTML</li>
+        <li>SEO Best Practices</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>My Repository</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3School</li>
+        <li>Projects</li>
+    </ul>
+
+    <h3>CSS</h3>
+    <p>CSS is essential for styling and layout design. Dive into:</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to CSS</li>
+        <li>CSS Selectors & Combinators</li>
+        <li>CSS Typography</li>
+        <li>CSS Box Model</li>
+    </ul>
+
+    <h4>Advanced CSS</h4>
+    <ul>
+        <li>Shadow & Gradients</li>
+        <li>Transitions & Animation</li>
+        <li>Variables</li>
+        <li>Responsiveness</li>
+        <li>CSS Layout (Position, Floats, Flexbox, Grid)</li>
+        <li>CSS Architecture (BEM/SMACSS)</li>
+    </ul>
+
+    <h4>CSS Frameworks & Pre-processors</h4>
+    <ul>
+        <li>Bootstrap 5 / Tailwind CSS</li>
+        <li>SASS / LESS / PostCSS</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>CSS Full Course (Anisul Islam)</li>
+        <li>CSS Documentation (Anisul Islam)</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3School</li>
+        <li>Projects</li>
+    </ul>
+
+    <h3>JavaScript</h3>
+    <p>JavaScript brings interactivity to web pages. Master the following:</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to JS</li>
+        <li>JS Tokens</li>
+        <li>Control Statements</li>
+        <li>Objects, Arrays</li>
+        <li>Functions</li>
+        <li>DOM, BOM</li>
+        <li>Events, Event Handlers</li>
+        <li>Exception Handling</li>
+    </ul>
+
+    <h4>Advanced JavaScript</h4>
+    <ul>
+        <li>ES6 Features</li>
+        <li>Synchronous vs Asynchronous</li>
+        <li>Classes, Inheritance</li>
+        <li>JSON</li>
+        <li>Web APIs</li>
+        <li>IIFE, Closure, Currying</li>
+    </ul>
+
+    <h4>Tools & Libraries</h4>
+    <ul>
+        <li>Package Managers: npm / Yarn</li>
+        <li>Type Checkers: TypeScript / Flow</li>
+        <li>Build Tools: Webpack / esbuild / Vite</li>
+        <li>Linters & Formatters: Prettier, ESLint</li>
+        <li>Task Runners: npm scripts / Gulp</li>
+    </ul>
+
+    <h4>Testing</h4>
+    <ul>
+        <li>Mocha, Jest (for JS, React/React Native)</li>
+        <li>Unit, Integration, End-to-end Testing</li>
+    </ul>
+
+    <h4>Frameworks</h4>
+    <ul>
+        <li>React (Redux), Angular (RxJS), Vue.js (Vuex)</li>
+        <li>React with TypeScript</li>
+        <li>React with Testing</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>My TypeScript Documentation</li>
+        <li>Projects</li>
+    </ul>
+
+    <hr>
+
+    <h2>Back-end Development Roadmap</h2>
+
+    <h3>Node.js</h3>
+    <p>Learn the following concepts and techniques for server-side development:</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to Node.js</li>
+        <li>Setting up Node.js Environment</li>
+        <li>Node.js Modules</li>
+        <li>Asynchronous Programming</li>
+        <li>File System Operations</li>
+        <li>Working with Buffers and Streams</li>
+    </ul>
+
+    <h4>Advanced Node.js</h4>
+    <ul>
+        <li>Event Emitters</li>
+        <li>Node.js HTTP Module</li>
+        <li>Web Sockets</li>
+        <li>Error Handling</li>
+        <li>Middleware</li>
+        <li>Authentication & Authorization</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>Node.js Full Course (Anisul Islam)</li>
+        <li>Node.js Documentation (Anisul Islam)</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3Schools</li>
+        <li>Projects</li>
+    </ul>
+
+    <h3>Express.js</h3>
+    <p>Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to Express.js</li>
+        <li>Routing</li>
+        <li>Middleware</li>
+        <li>Request and Response Handling</li>
+        <li>Templating Engines</li>
+    </ul>
+
+    <h4>Advanced Express.js</h4>
+    <ul>
+        <li>Authentication & Authorization</li>
+        <li>Error Handling</li>
+        <li>RESTful API Development</li>
+        <li>Session Management</li>
+        <li>Security Best Practices</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>Express.js Full Course (Anisul Islam)</li>
+        <li>Express.js Documentation (Anisul Islam)</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3School</li>
+        <li>Projects</li>
+    </ul>
+
+    <h3>MongoDB</h3>
+    <p>MongoDB is a NoSQL database program that uses JSON-like documents with optional schemas.</p>
+
+    <h4>Fundamentals</h4>
+    <ul>
+        <li>Introduction to MongoDB</li>
+        <li>MongoDB Installation & Configuration</li>
+        <li>CRUD Operations</li>
+        <li>Schema Design</li>
+        <li>Indexing</li>
+    </ul>
+
+    <h4>Advanced MongoDB</h4>
+    <ul>
+        <li>Aggregation Framework</li>
+        <li>Replication</li>
+        <li>Sharding</li>
+        <li>Security Best Practices</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>MongoDB Full Course (Anisul Islam)</li>
+        <li>MongoDB Documentation (Anisul Islam)</li>
+        <li>Sololearn (Certificate)</li>
+        <li>W3School</li>
+        <li>Projects</li>
+    </ul>
+
+    <hr>
+
+    <h2>Integration</h2>
+    <p>Combine your front-end and back-end skills to create full stack web applications. Use React to build dynamic and interactive user interfaces that communicate with your server-side APIs.</p>
+
+    <hr>
+
+    <h2>Deployment</h2>
+    <p>Learn how to deploy your web applications to hosting platforms like Heroku or AWS. Understand the process of setting up a production environment and managing your application in a live server environment.</p>
+
+    <h4>Resources</h4>
+    <ul>
+        <li>Deployment Guide (Anisul Islam)</li>
+        <li>Heroku Documentation</li>
+        <li>AWS Documentation</li>
+    </ul>
+
+    <hr>
+
+    <h2>Version Control</h2>
+    <p>Learn to effectively manage your codebase with version control:</p>
+    <ul>
+        <li>GitHub / GitLab / Bitbucket</li>
+        <li>Adding, Committing, Uncommitting files in Git</li>
+        <li><code>.gitignore</code>, <code>README.md</code></li>
+        <li>Branching, Checkout</li>
+        <li>Remote Repository, Push, Pull</li>
+        <li>Forking, Cloning</li>
+        <li>Merging (2-way, 3-way)</li>
+    </ul>
+
+    <h4>Resources</h4>
+    <ul>
+        <li><a href="https://github.com/mdsiamulislam/Git-operations">My Repository: Git-operations</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>Mobile & Desktop Development</h2>
+    <ul>
+        <li>Mobile Development: Flutter / React Native</li>
+        <li>Desktop Development: Electron Technology</li>
+    </ul>
+
+    <hr>
+
+    <h2>Credits</h2>
+    <p>This documentation was created with the help of various resources:</p>
+    <ul>
+        <li><strong>ChatGPT</strong> for text formatting and assistance in structuring the documentation.</li>
+        <li><strong>Anisul Islam</strong> for providing valuable learning materials.</li>
+        <li><strong>W3Schools</strong> for comprehensive tutorials and references.</li>
+        <li><strong>Internet Search</strong> for additional information and examples.</li>
+    </ul>
+
+</body>
+</html>
