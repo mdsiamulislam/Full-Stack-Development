@@ -167,6 +167,24 @@ CSS is a powerful tool for web design, enabling you to create visually appealing
 
 ### Projects
 
-## Projects : Profile-UI-Design
+## Projects1 : Shop Display Website
+
+<img src="project1.png"/>
+</hr>
+
+## Projects2 : Shoping Website
+
+<img src="project2.png"/>
+</hr>
+
+<img src="project1.png"/>
+</hr>
+
+## Projects3 : HTML Projects Add CSS
+
+<img src="project2.png"/>
+</hr>
+
+## Project4 : Profile-UI-Design
 
 <img src="Profile-UI-Design/picture/image.png" alt= "" class="my-img"/>
